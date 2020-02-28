@@ -3,12 +3,11 @@ import JournalEntryComponent from "./JournalEntry.js"
 
 
 const entryLog = document.querySelector("#entryLog")
-
 const EntryListComponent = () => {
   const entries = useJournalEntries()
 
-  for (entry of entries) {
-    entryLog.innerHTML += JournalEntryComponent(entry)
+  for (const journalObject of entries) {
+    entryLog.innerHTML += JournalEntryComponent(journalObject)
   }
 }
 
