@@ -1,3 +1,5 @@
+import { saveJournalEntry } from './JournalDataProvider.js'
+
 const JournalFormComponent = () => {
   const contentElement = document.querySelector('.journalForm')
 
@@ -25,6 +27,7 @@ const JournalFormComponent = () => {
   return contentElement
 }
 
+saveJournalEntry()
 
 export { JournalFormComponent }
 // export default JournalFormComponent

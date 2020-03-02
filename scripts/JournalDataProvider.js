@@ -24,7 +24,7 @@ const saveJournalEntry = journalEntries => {
     },
     body: JSON.stringify(newJournalEntry)
   })
-  .then()
+  .then(journalEntries)
 }
 
-export default useJournalEntries
+export { saveJournalEntry, useJournalEntries }

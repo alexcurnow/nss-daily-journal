@@ -26,7 +26,6 @@ EntryListComponent()
     const moodValue = document.querySelector('#mood').value
 
     const newEntry = createEntry(dateValue, conceptsValue, entryValue, moodValue)
-    console.log(newEntry)
 
     return newEntry
 
