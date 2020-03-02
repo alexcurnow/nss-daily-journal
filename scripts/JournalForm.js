@@ -18,11 +18,13 @@ const JournalFormComponent = () => {
         <option value="Mad">Mad</option> 
         <option value="Meh...">Meh...</option> 
       </select>
-      <button>Record Journal Entry</button>
+      <button class="recordEntry">Record Journal Entry</button>
     </fieldset>
   </form>
   `
   return contentElement
 }
 
-export default JournalFormComponent
+
+export { JournalFormComponent }
+// export default JournalFormComponent
