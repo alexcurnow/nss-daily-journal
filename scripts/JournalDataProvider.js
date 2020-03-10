@@ -1,30 +1,22 @@
-const journal = [
-  {
-    date: '07/24/2025',
-    concept: 'HTML & CSS',
-    entry:
-      'We talked about HTML components and how to make grid layouts with Flexbox in CSS.',
-    mood: 'Ok'
-  }
-]
+let entries = []
 
-const useJournalEntries = () => {
-  const sortedByDate = journal.sort(
-    (currentEntry, nextEntry) =>
-      Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-  )
-  return sortedByDate
+export const getJournalEntries = () => {
+  return fetch('http://localhost:3000/entries')
+  .then(res => res.json())
+  .then(parsedEntries => {
+    entries = parsedEntries.slice()
+  })
 }
 
-const saveJournalEntry = journalEntries => {
-  fetch("http://localhost:3000/entries", {
+export const useJournalEntries = () => entries
+
+export const saveJournalEntry = entryObject => {
+  return fetch('http://localhost:3000/entries', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(newJournalEntry)
+    body: JSON.stringify(entryObject)
   })
-  .then(journalEntries)
+  .then(getJournalEntries)
 }
-
-export { saveJournalEntry, useJournalEntries }

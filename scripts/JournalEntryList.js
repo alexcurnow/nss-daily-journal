@@ -1,4 +1,4 @@
-import useJournalEntries from "./JournalDataProvider.js"
+import { useJournalEntries } from "./JournalDataProvider.js"
 import JournalEntryComponent from "./JournalEntry.js"
 
 

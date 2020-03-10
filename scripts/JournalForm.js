@@ -1,6 +1,8 @@
-import { saveJournalEntry } from './JournalDataProvider.js'
+import { saveJournalEntry } from "./JournalDataProvider.js"
 
-const JournalFormComponent = () => {
+const eventHub = document.querySelector('.container')
+
+export const JournalFormComponent = () => {
   const contentElement = document.querySelector('.journalForm')
 
   contentElement.innerHTML = `
@@ -27,7 +29,24 @@ const JournalFormComponent = () => {
   return contentElement
 }
 
-saveJournalEntry()
+export const createEntry = (date, concepts, entry, mood) => {
+  return {
+    date: date,
+    concept: concepts,
+    entry: entry,
+    mood: mood
+  }
+}
 
-export { JournalFormComponent }
-// export default JournalFormComponent
+saveJournalEntry(createEntry)
+
+eventHub.addEventListener("click", event => {
+  // Invoke factory function
+  const newEntryObject = createEntry(dateVal, conceptsVal, entryVal, moodVal)
+  // Send new entry object to
+  saveJournalEntry(newEntryObject)
+      .then(
+          // Dispatch new custom event that state has changed
+          const stateUpdate = new CustomEvent('change', )
+      )
+})
