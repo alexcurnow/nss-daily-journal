@@ -38,15 +38,4 @@ export const createEntry = (date, concepts, entry, mood) => {
   }
 }
 
-saveJournalEntry(createEntry)
 
-eventHub.addEventListener("click", event => {
-  // Invoke factory function
-  const newEntryObject = createEntry(dateVal, conceptsVal, entryVal, moodVal)
-  // Send new entry object to
-  saveJournalEntry(newEntryObject)
-      .then(
-          // Dispatch new custom event that state has changed
-          const stateUpdate = new CustomEvent('change', )
-      )
-})

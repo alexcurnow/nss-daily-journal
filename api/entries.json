@@ -8,6 +8,10 @@
       "mood": "Ok"
     },
     {
+      "date": "2020-03-10",
+      "concept": "Saving data to API.",
+      "entry": "Stoked I was able to actually save this entry to the API 😳\nNow I just need to decouple the modules... and I do not yet know how to do that...",
+      "mood": "Happy",
       "id": 2
     }
   ]
