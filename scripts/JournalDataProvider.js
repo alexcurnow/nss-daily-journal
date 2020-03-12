@@ -1,7 +1,7 @@
 let entries = []
 
 export const getJournalEntries = () => {
-  return fetch('http://localhost:3000/entries')
+  return fetch('http://localhost:8088/entries')
   .then(res => res.json())
   .then(parsedEntries => {
     entries = parsedEntries.slice()
@@ -11,7 +11,7 @@ export const getJournalEntries = () => {
 export const useJournalEntries = () => entries
 
 export const saveJournalEntry = entryObject => {
-  return fetch('http://localhost:3000/entries', {
+  return fetch('http://localhost:8088/entries', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
