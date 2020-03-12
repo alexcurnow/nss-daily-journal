@@ -1,13 +1,6 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "07/24/2025",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok"
-    },
-    {
       "date": "2020-03-10",
       "concept": "Saving data to API.",
       "entry": "Stoked I was able to actually save this entry to the API 😳\nNow I just need to decouple the modules... and I do not yet know how to do that...",
@@ -20,20 +13,6 @@
       "entry": "Just trying to save some data over here...\n",
       "mood": "Happy",
       "id": 3
-    },
-    {
-      "date": "",
-      "concept": "asdf",
-      "entry": "sdaf",
-      "mood": "Happy",
-      "id": 4
-    },
-    {
-      "date": "",
-      "concept": "sdafdsfsafdfdsafdsf",
-      "entry": "sdfsdfsadfasdfasdfsfd",
-      "mood": "Happy",
-      "id": 5
     },
     {
       "date": "2020-03-12",
