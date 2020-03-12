@@ -13,6 +13,34 @@
       "entry": "Stoked I was able to actually save this entry to the API 😳\nNow I just need to decouple the modules... and I do not yet know how to do that...",
       "mood": "Happy",
       "id": 2
+    },
+    {
+      "date": "2020-03-12",
+      "concept": "Saving data to JSON server",
+      "entry": "Just trying to save some data over here...\n",
+      "mood": "Happy",
+      "id": 3
+    },
+    {
+      "date": "",
+      "concept": "asdf",
+      "entry": "sdaf",
+      "mood": "Happy",
+      "id": 4
+    },
+    {
+      "date": "",
+      "concept": "sdafdsfsafdfdsafdsf",
+      "entry": "sdfsdfsadfasdfasdfsfd",
+      "mood": "Happy",
+      "id": 5
+    },
+    {
+      "date": "2020-03-12",
+      "concept": "",
+      "entry": "Looks like I was able to get the API to update as well as render the journal entries below. Next up: do some decoupling and figure out how to delete entries. I think I'll have the entry list component render a button that has an event listener attached to it that calls a deleteJournalEntry function, which will come from the data provider... yeah that makes sense, i think...",
+      "mood": "Happy",
+      "id": 6
     }
   ]
 }

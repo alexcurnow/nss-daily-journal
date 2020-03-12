@@ -1,9 +1,26 @@
 import { saveJournalEntry } from "./JournalDataProvider.js"
 
 const eventHub = document.querySelector('.container')
+const contentElement = document.querySelector('.journalForm')
+
+
+contentElement.addEventListener('click', event => {
+  if (event.target.classList.contains('recordEntry')) {
+    // event.preventDefault()
+
+    const dateVal = document.querySelector('#journalDate').value
+    const conceptsVal = document.querySelector('#concepts').value
+    const entryVal = document.querySelector('#entry').value
+    const moodVal = document.querySelector('#mood').value
+  
+    const newEntryObject = createEntry(dateVal, conceptsVal, entryVal, moodVal)
+    saveJournalEntry(newEntryObject)
+
+  }  
+})
+
 
 export const JournalFormComponent = () => {
-  const contentElement = document.querySelector('.journalForm')
 
   contentElement.innerHTML = `
   <form class="journal" action="">
@@ -28,6 +45,7 @@ export const JournalFormComponent = () => {
   `
   return contentElement
 }
+
 
 export const createEntry = (date, concepts, entry, mood) => {
   return {
