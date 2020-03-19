@@ -6,7 +6,6 @@ const contentElement = document.querySelector('.journalForm')
 
 contentElement.addEventListener('click', event => {
   if (event.target.classList.contains('recordEntry')) {
-    // event.preventDefault()
 
     const dateVal = document.querySelector('#journalDate').value
     const conceptsVal = document.querySelector('#concepts').value

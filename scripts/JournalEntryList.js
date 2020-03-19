@@ -5,10 +5,14 @@ const entryLog = document.querySelector("#entryLog")
 
 entryLog.addEventListener('click', event => {
   if (event.target.id.startsWith('delete-btn-')) {
-    
-    const [prefix, entryIdNumber] = event.target.parentNode.id.split("--")
-    deleteJournalEntry(entryIdNumber)
-    event.target.parentNode.style.display = 'none'
+
+    if (confirm('Are you sure you want to delete this entry? This action cannot be undone.')) {
+
+      const [prefix, entryIdNumber] = event.target.parentNode.id.split("--")
+      deleteJournalEntry(entryIdNumber)
+      event.target.parentNode.style.display = 'none'
+    }
+    return false
   }
 })
 
