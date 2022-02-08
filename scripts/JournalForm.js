@@ -42,7 +42,7 @@ export const JournalFormComponent = () => {
     </fieldset>
   </form>
   `
-  return contentElement
+  // return contentElement
 }
 
 
@@ -54,5 +54,3 @@ export const createEntry = (date, concepts, entry, mood) => {
     mood: mood
   }
 }
-
-

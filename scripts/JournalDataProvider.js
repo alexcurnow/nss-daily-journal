@@ -1,7 +1,7 @@
 let entries = []
 
 export const getJournalEntries = () => {
-  return fetch('http://localhost:8088/entries')
+  return fetch('http://localhost:8080/entries')
   .then(res => res.json())
   .then(parsedEntries => {
     entries = parsedEntries.slice()
@@ -11,7 +11,7 @@ export const getJournalEntries = () => {
 export const useJournalEntries = () => entries
 
 export const saveJournalEntry = entryObject => {
-  return fetch('http://localhost:8088/entries', {
+  return fetch('http://localhost:8080/entries', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -22,7 +22,7 @@ export const saveJournalEntry = entryObject => {
 }
 
 export const deleteJournalEntry = entryID => {
-  return fetch(`http://localhost:8088/entries/${entryID}`, {
+  return fetch(`http://localhost:8080/entries/${entryID}`, {
     method: 'DELETE',
   })
 }

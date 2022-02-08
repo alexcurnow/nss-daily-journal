@@ -6,6 +6,20 @@
       "entry": "Looks like I was able to get the API to update as well as render the journal entries below. Next up: do some decoupling and figure out how to delete entries. I think I'll have the entry list component render a button that has an event listener attached to it that calls a deleteJournalEntry function, which will come from the data provider... yeah that makes sense, i think...",
       "mood": "Happy",
       "id": 6
+    },
+    {
+      "date": "2022-02-06",
+      "concept": "Testing...",
+      "entry": "Here is a test journal entry!",
+      "mood": "Elated",
+      "id": 7
+    },
+    {
+      "date": "2022-02-06",
+      "concept": "Making sure the thing I broke is working again...",
+      "entry": "Here's some fluff to see if the thing I broke is working again!",
+      "mood": "Happy",
+      "id": 8
     }
   ]
 }
